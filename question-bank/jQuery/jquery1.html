@@ -1,0 +1,108 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Click Event
+            $("#clickBtn").click(function () {
+                alert("Button Clicked!");
+            });
+
+            // Double Click Event
+            $("#doubleClickDiv").dblclick(function () {
+                alert("Double Clicked!");
+            });
+
+            // Key Press Event
+            $("#keyPressInput").keypress(function () {
+                alert("Key Pressed!");
+            });
+
+            // Key Down Event
+            $("#keyDownInput").keydown(function () {
+                alert("Key Down!");
+            });
+
+            // Key Up Event
+            $("#keyUpInput").keyup(function () {
+                alert("Key Up!");
+            });
+
+            // Submit Event
+            $("#submitForm").submit(function (e) {
+                e.preventDefault();
+                alert("Form Submitted!");
+            });
+
+            // Change Event
+            $("#changeSelect").change(function () {
+                alert("Select Value Changed!");
+            });
+
+            // Focus Event
+            $("#focusInput").focus(function () {
+                alert("Input Focused!");
+            });
+
+            // Blur Event
+            $("#blurInput").blur(function () {
+                alert("Input Blurred!");
+            });
+
+            // Load Event
+            $(window).load(function () {
+                alert("Page Loaded!");
+            });
+
+            // Resize Event
+            $(window).resize(function () {
+                alert("Window Resized!");
+            });
+
+            // Scroll Event
+            $(window).scroll(function () {
+                alert("Window Scrolled!");
+            });
+
+            // Unload Event
+            $(window).unload(function () {
+                alert("Page Unloaded!");
+            });
+        });
+    </script>
+  </head>
+  <body>
+
+    <button id="clickBtn">Click Me</button>
+
+    <div id="doubleClickDiv" style="border: 1px solid black; padding: 10px;">
+      Double Click Me
+    </div>
+
+    <input type="text" id="keyPressInput" placeholder="Press a Key">
+
+    <input type="text" id="keyDownInput" placeholder="Key Down">
+
+    <input type="text" id="keyUpInput" placeholder="Key Up">
+
+    <form id="submitForm">
+      <input type="submit" value="Submit Form">
+    </form>
+
+    <select id="changeSelect">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+
+    <input type="text" id="focusInput" placeholder="Focus">
+
+    <input type="text" id="blurInput" placeholder="Blur">
+
+  </body>
+</html>

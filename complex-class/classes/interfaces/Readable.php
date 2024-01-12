@@ -2,8 +2,7 @@
 
   namespace interfaces;
 
-  interface Readable
-  {
+  interface Readable {
     public function read();
   }
 

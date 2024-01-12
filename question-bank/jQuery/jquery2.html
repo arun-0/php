@@ -1,0 +1,64 @@
+<!--26.	Write a program to perform JQuery effects like :
+hide show, fade, slide.-->
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Hide and Show Effects
+            $("#hideBtn").click(function () {
+                $("#hideShowDiv").hide(1000); // Hide with animation (1000 milliseconds)
+            });
+
+            $("#showBtn").click(function () {
+                $("#hideShowDiv").show(1000); // Show with animation (1000 milliseconds)
+            });
+
+            // Fade In and Fade Out Effects
+            $("#fadeInBtn").click(function () {
+                $("#fadeInOutDiv").fadeIn(1000); // Fade In with animation (1000 milliseconds)
+            });
+
+            $("#fadeOutBtn").click(function () {
+                $("#fadeInOutDiv").fadeOut(1000); // Fade Out with animation (1000 milliseconds)
+            });
+
+            // Slide Down and Slide Up Effects
+            $("#slideDownBtn").click(function () {
+                $("#slideDownUpDiv").slideDown(1000); // Slide Down with animation (1000 milliseconds)
+            });
+
+            $("#slideUpBtn").click(function () {
+                $("#slideDownUpDiv").slideUp(1000); // Slide Up with animation (1000 milliseconds)
+            });
+        });
+    </script>
+  </head>
+  <body>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <div id="hideShowDiv" style="border: 1px solid black; padding: 10px;">
+      Hide and Show
+    </div>
+
+    <button id="fadeInBtn">Fade In</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <div id="fadeInOutDiv" style="border: 1px solid black; padding: 10px;">
+      Fade In and Fade Out
+    </div>
+
+    <button id="slideDownBtn">Slide Down</button>
+    <button id="slideUpBtn">Slide Up</button>
+    <div id="slideDownUpDiv" style="border: 1px solid black; padding: 10px;">
+      Slide Down and Slide Up
+    </div>
+
+  </body>
+</html>

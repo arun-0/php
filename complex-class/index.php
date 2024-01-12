@@ -1,5 +1,9 @@
 <?php
 
+  use classes\Book;
+  use classes\Ebook;
+  use classes\Library;
+
   require_once 'classes/Book.php';
   require_once 'classes/Ebook.php';
   require_once 'classes/Library.php';

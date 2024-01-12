@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+  </head>
+  <body>
+    <h2>Students Information</h2>
+    <button onclick="loadData()">Load Data</button>
+    <div id="output"></div>
+
+    <script>
+        function loadData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    displayData(data);
+                }
+            };
+            xhttp.open("GET", "ajax_data.php", true);
+            xhttp.send();
+        }
+
+        function displayData(data) {
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = ""; // Clear previous data
+
+            for (var i = 0; i < data.length; i++) {
+                outputDiv.innerHTML += "<p>ID: " + data[i].stud_id +
+                    ", Name: " + data[i].stud_name +
+                    ", Enrollment: " + data[i].stud_enroll +
+                    ", Gender: " + data[i].stud_gender +
+                    ", Mobile: " + data[i].stud_mob +
+                    ", DOB: " + data[i].stud_dob + "</p>";
+            }
+        }
+    </script>
+  </body>
+</html>

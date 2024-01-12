@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function updateDomElement(num1) {
+                var squire = num1 * num1;
+                domElement = document.querySelector('#squire');
+                domElement.textContent = 'squire of ' + num1 + ' is ' + squire;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" name="input" onkeydown="updateDomElement(this.value)"><br><br><br><br><br><br><br>
+        <span id="squire"></span>
+    </body>
+</html>
