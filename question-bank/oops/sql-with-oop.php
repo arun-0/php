@@ -3,12 +3,10 @@
 <?php
 
   // Database class
-  class Database
-  {
+  class Database {
     private $conn;
 
-    public function __construct($host, $username, $password, $database)
-    {
+    public function __construct($host, $username, $password, $database) {
       $this->conn = new mysqli($host, $username, $password, $database);
 
       if ($this->conn->connect_error) {
@@ -16,16 +14,14 @@
       }
     }
 
-    public function insertData($name, $enroll, $gender, $mobile, $dob)
-    {
+    public function insertData($name, $enroll, $gender, $mobile, $dob) {
       $sql = "INSERT INTO mca (stud_name, stud_enroll, stud_gender, stud_mob, stud_dob) 
                 VALUES ('$name', '$enroll', '$gender', '$mobile', '$dob')";
 
       return $this->conn->query($sql);
     }
 
-    public function updateData($id, $name, $enroll, $gender, $mobile, $dob)
-    {
+    public function updateData($id, $name, $enroll, $gender, $mobile, $dob) {
       $sql = "UPDATE mca 
                 SET stud_name='$name', stud_enroll='$enroll', stud_gender='$gender', stud_mob='$mobile', stud_dob='$dob' 
                 WHERE stud_id=$id";
@@ -33,8 +29,7 @@
       return $this->conn->query($sql);
     }
 
-    public function selectData()
-    {
+    public function selectData() {
       $result = $this->conn->query("SELECT * FROM mca");
       $data = [];
 
@@ -45,15 +40,13 @@
       return $data;
     }
 
-    public function deleteData($id)
-    {
+    public function deleteData($id) {
       $sql = "DELETE FROM mca WHERE stud_id = $id";
 
       return $this->conn->query($sql);
     }
 
-    public function __destruct()
-    {
+    public function __destruct() {
       $this->conn->close();
     }
   }

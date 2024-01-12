@@ -3,26 +3,21 @@
 <?php
 
   // Base class
-  class Animal
-  {
+  class Animal {
     public $name;
 
-    public function __construct($name)
-    {
+    public function __construct($name) {
       $this->name = $name;
     }
 
-    public function eat()
-    {
+    public function eat() {
       echo $this->name . " is eating.<br>";
     }
   }
 
   // Derived class
-  class Cat extends Animal
-  {
-    public function meow()
-    {
+  class Cat extends Animal {
+    public function meow() {
       echo $this->name . " says meow.<br>";
     }
   }

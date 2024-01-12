@@ -3,8 +3,7 @@
   // Global variable
   $globalVar = "I am global";
 
-  function exampleFunction($input1, $input2)
-  {
+  function exampleFunction($input1, $input2) {
     // Local variable
     $localVar = "I am local";
 

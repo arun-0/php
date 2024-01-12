@@ -1,26 +1,21 @@
 <?php
 
-  class Counter
-  {
+  class Counter {
     public static $count = 0;
 
-    public function increment()
-    {
+    public function increment() {
       self::$count++;
     }
 
-    public static function getCount()
-    {
+    public static function getCount() {
       return self::$count;
     }
 
-    public function getCountViaObject()
-    {
+    public function getCountViaObject() {
       return self::$count;
     }
 
-    public function getIsbn()
-    {
+    public function getIsbn() {
       return self->$count;
     }
 

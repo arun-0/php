@@ -1,4 +1,5 @@
 <?php
+
   // Set a cookie
   setcookie("user", "John Doe", time() + 3600, "/");
 

@@ -6,7 +6,7 @@
   echo "Count: " . count($fruits) . "<br>";
   echo "First Element: " . reset($fruits) . "<br>";
   echo "Last Element: " . end($fruits) . "<br>";
-  print_r(array_reverse($fruits)) . "<br>". "<br>";
+  print_r(array_reverse($fruits)) . "<br>" . "<br>";
 
 
   // Extra

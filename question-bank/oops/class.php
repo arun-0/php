@@ -2,22 +2,19 @@
 
 <?php
 
-  class Student
-  {
+  class Student {
     // Properties
     public $name;
     public $rollNumber;
 
     // Constructor
-    public function __construct($name, $rollNumber)
-    {
+    public function __construct($name, $rollNumber) {
       $this->name = $name;
       $this->rollNumber = $rollNumber;
     }
 
     // Method
-    public function displayInfo()
-    {
+    public function displayInfo() {
       echo "Name: {$this->name}, Roll Number: {$this->rollNumber}";
     }
   }

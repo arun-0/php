@@ -2,23 +2,19 @@
 
 <?php
 
-  class MyClass
-  {
+  class MyClass {
     // Constructor
-    public function __construct()
-    {
+    public function __construct() {
       echo "Constructor called!<br>";
     }
 
     // Destructor
-    public function __destruct()
-    {
+    public function __destruct() {
       echo "Destructor called!<br>";
     }
 
     // Method
-    public function showMessage()
-    {
+    public function showMessage() {
       echo "Hello, World!<br>";
     }
   }

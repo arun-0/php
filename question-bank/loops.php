@@ -75,12 +75,12 @@
   }
 
   // array_walk Function
-  array_walk($fruits, function($value, $key) {
+  array_walk($fruits, function ($value, $key) {
     // Code using $key and $value
   });
 
   // array_map Function
-  $newArray = array_map(function($value) {
+  $newArray = array_map(function ($value) {
     // Transform $value
     return $newValue;
   }, $fruits);
@@ -93,7 +93,6 @@
   foreach ($iterator as $key => $value) {
     // Code using $key and $value
   }
-
 
 
   // objects
@@ -132,7 +131,7 @@
 
   // Using array_walk or array_map on Object Properties
   //If you convert an object's properties to an array, you can use array_walk or array_map.
-  array_walk(get_object_vars($object), function($value, $property) {
+  array_walk(get_object_vars($object), function ($value, $property) {
     // Code using $property and $value
   });
 
